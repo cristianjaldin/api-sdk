@@ -1,4 +1,4 @@
-package com.example.demo.sdk.user.config;
+package com.example.demo.sdk.user.configSDK;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
