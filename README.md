@@ -52,19 +52,78 @@ sdk.user.service.path=/api/v1/users
 UserSdk have four methods:
 
 ```java
+List<UserDto> getAll();
 UserDto get(String id);
 UserDto add(UserCreateDto userCreateDto);
 UserDto update(String id, UserUpdateDto userUpdateDto);
-List<UserDto> getAll();
 void delete(String id);
 ```
 
 
 ## Usage
 
-Example of use ...
+Example of use get All ...
 
 ```java
+@Autowired
+private UserSdk userSdk;
+...
+
+List<UserDto> users = userSdk.getAll();
+
+```
+
+
+Example of use get by id ...
+
+```java
+@Autowired
+private UserSdk userSdk;
+...
+
+UserDto user = userSdk.get("5f0213b863993b271b08a54b");
+
+```
+
+Example add new User ...
+
+```java
+@Autowired
+private UserSdk userSdk;
+...
+
+UserCreateDto userCreateDto = new UserCreateDto();
+userCreateDto.setName("Cristian");
+userCreateDto.setSurname("Jaldin");
+userCreateDto.setUsername("cjaldin");
+userCreateDto.setPassword("1234");
+userCreateDto.setRoles(Arrays.asList("ADMIN"));
+
+UserDto userCreated = userSdk.add(userCreateDto);
+
+```
+
+
+Example update User ...
+
+```java
+@Autowired
+private UserSdk userSdk;
+...
 
 
 ```
+
+Example delete User by id ...
+
+```java
+@Autowired
+private UserSdk userSdk;
+...
+
+userSdk.delete("5f0213b863993b271b08a54b");
+
+```
+
+
+
