@@ -1,6 +1,6 @@
 # User SDK
 
-User-sdk is a Java library.
+User-sdk is a Java library for [User Service](https://github.com/cristianjaldin/user-service).
 
 # Related projects
 
@@ -42,21 +42,21 @@ public class ConfigUserSdk {
 Then configure the following parameters in your configuration file **application.properties**:
 
 ```java
+sdk.user.service.scheme.url=http
 sdk.user.service.base.url=localhost:8090
 sdk.user.service.path=/api/v1/users
-sdk.user.service.scheme.url=http
 ```
-
-**Warning:**
 
 ## Methods
 
-There is a service with four methods. The first one 
+UserSdk have four methods:
 
 ```java
-
-
-
+UserDto get(String id);
+UserDto add(UserCreateDto userCreateDto);
+UserDto update(String id, UserUpdateDto userUpdateDto);
+List<UserDto> getAll();
+void delete(String id);
 ```
 
 

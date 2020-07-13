@@ -32,7 +32,7 @@ public class UserSdkImpl implements UserSdk {
 	@Autowired
 	private UserUrlProvider userUrlProvider;
 
-	public List<UserDto> findAll() {
+	public List<UserDto> getAll() {
 		List<UserDto> users = null;
 		System.out.println("find alllll");
 		// Url

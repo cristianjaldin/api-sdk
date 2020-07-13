@@ -11,5 +11,5 @@ public interface UserSdk {
 	UserDto add(UserCreateDto userCreateDto);
 	UserDto update(String id, UserUpdateDto userUpdateDto);
 	void delete(String id);
-	List<UserDto> findAll();
+	List<UserDto> getAll();
 }
